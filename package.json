@@ -1,0 +1,25 @@
+{
+  "name": "ecommerce-layout",
+  "version": "1.0.0",
+  "description": "### Header http://ecommerceuxdesign.com/collection/website-header/ 1. Link to Customer Service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PDVega/ecommerce-layout.git"
+  },
+  "keywords": [
+    "ecommerce"
+  ],
+  "author": "pdvega",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PDVega/ecommerce-layout/issues"
+  },
+  "homepage": "https://github.com/PDVega/ecommerce-layout#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
