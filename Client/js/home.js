@@ -1,12 +1,38 @@
 axios.defaults.baseURL = 'http://localhost:3000/suplement';
+
+var dataStorage = function() {
+    var data = JSON.parse(localStorage.getItem('cart') || '[]');
+    return data;
+  }
+
+
 var home = new Vue({
   el: '#home',
   data: {
     suplements: [],
     detail: [],
-    cartItem: []
+    cartItem: dataStorage(),
+    qty: 0,
+    total: 0
   },
+  // computed: {
+  //   total: () => {
+  //     return this.cartItem.price * this.qty
+  //   }
+  // },
   methods: {
+    calculateTotal () {
+      let total = 0;
+      this.cartItem.forEach(obj => {
+        total += (this.qty * obj.price);
+      })
+      this.total = total;
+      localStorage.setItem("cart", JSON.stringify(this.cartItem))
+    },
+    removeItem: function(obj,index) {
+      this.cartItem.splice(index,1)
+      localStorage.setItem("cart", JSON.stringify(this.cartItem))
+    },
     getAllSuplement () {
       axios.get('/')
       .then(res => {
@@ -29,12 +55,15 @@ var home = new Vue({
     },
     addToCart (obj) {
       // console.log(obj);
-      this.cartItem.push(obj)
+      var data = this.cartItem
+      data.push(obj)
+      console.log(data);
+      localStorage.setItem('cart',JSON.stringify(data))  
       alert('Thank you, your item already added to Cart')
-      console.log(this.cartItem);
     }
   },
-  created () {
+  created () {  
+    // this.getCart()
     this.getAllSuplement()
   }
 })

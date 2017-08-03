@@ -12,8 +12,10 @@ const express = require('express'),
 
       //All Route Files
       routes = require('./routes/index'),
-      users = require('./routes/users'),
+      customer = require('./routes/customer'),
       suplement = require('./routes/suplement'),
+      transaction = require('./routes/transaction'),
+      login = require('./routes/login'),
 
       //Express Instance
       app = express();
@@ -28,8 +30,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 app.use('/', routes);
-app.use('/users', users);
+app.use('/customer', customer);
 app.use('/suplement', suplement);
+app.use('/transaction', transaction);
+app.use('/login', login);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
