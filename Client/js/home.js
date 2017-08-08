@@ -1,4 +1,4 @@
-axios.defaults.baseURL = 'http://localhost:3000/suplement';
+  axios.defaults.baseURL = 'http://localhost:3000/suplement';
 
 var dataStorage = function() {
     var data = JSON.parse(localStorage.getItem('cart') || '[]');
@@ -15,16 +15,11 @@ var home = new Vue({
     qty: 0,
     total: 0
   },
-  // computed: {
-  //   total: () => {
-  //     return this.cartItem.price * this.qty
-  //   }
-  // },
   methods: {
     calculateTotal () {
       let total = 0;
-      this.cartItem.forEach(obj => {
-        total += (this.qty * obj.price);
+      this.cartItem.forEach(data => {
+        total += (this.qty * data.price);
       })
       this.total = total;
       localStorage.setItem("cart", JSON.stringify(this.cartItem))

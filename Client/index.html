@@ -70,7 +70,7 @@
                               <td><input v-model="qty" type="number" name="" value=""></td>
                               <td>{{item.price * qty}}</td>
                               <td>
-                                <button @click="removeItem(obj,index)" type="button"class="btn btn-danger"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                <button @click="removeItem(item,index)" type="button"class="btn btn-danger"><i class="fa fa-times" aria-hidden="true"></i></button>
                               </td>
                             </tr>
                             <tr>
@@ -125,7 +125,7 @@
 					</div>
 					<div class="col-sm-3">
 						<div class="search_box pull-right">
-							<input type="text" placeholder="Search"/>
+							<input v-model="search" type="text" placeholder="Search"/>
 						</div>
 					</div>
 				</div>
