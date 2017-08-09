@@ -1,0 +1,93 @@
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>{{ product name }} | BORMA</title>
+      <!-- Bootstrap core CSS -->
+      <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!-- Custom styles for this template -->
+      <link href="css/shop-homepage.css" rel="stylesheet">
+      <style media="screen">
+        body {
+          background-color: #f5f5f5;
+        }
+      </style>
+    </head>
+    <body>
+      <header>
+        <nav class="navbar fixed-top navbar-toggleable-md bg-yellow">
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="container">
+            <a class="navbar-brand" href="#"><img src="./img/logo2.png" alt="borma logo" width="100"></a>
+            <div class="collapse navbar-collapse" id="navbarExample">
+              <ul class="navbar-nav col-md-3" id="search">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Categories
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Makanan</a>
+                    <a class="dropdown-item" href="#">Peralatan Kantor</a>
+                    <a class="dropdown-item" href="#">Fresh Food</a>
+                  </div>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input id="search" class="form-control mr-sm-2" type="text" placeholder="Search" style="width: 300px">
+                <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+              </form>
+              <ul class="navbar-nav ml-auto">
+                <li class="pr-3">
+                  <a class="nav-link" href="#"><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                  <a class="nav-link" href="#"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- header and navigation bar -->
+
+      <section id="main">
+        <div class="container">
+          <div class="row pt-5 d-flex">
+            <div class="col">
+              <div class="">
+                <img class="img-fluid" src="img/item-1.jpg" alt="beli-fidget-spinner">
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <div class="">
+                  <h1>Lemari Plastik</h1>
+                  <div class="product-single-price">
+                    <p>Rp. 150.000</p>
+                    <form class="form-inline row" method="post">
+                      <div class="col-12">
+                        <select class="custom-select" style="width: 200px;" name="">
+                          <option selected>Tipe 1</option>
+                          <option>Tipe 2</option>
+                        </select>
+                        <input class="form-control" type="number" name="" value="1" style="width: 80px">
+                        <button class="col-12 mt-4 btn" type="button" name="buy_now">Add to Cart</button>
+                        <button class="col-12 mt-2 btn buy-now-btn" type="button" name="add_to_cart">Buy Now</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="vendor/tether/tether.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+      <script src="js/style.js"></script>
+    </body>
+  </html>
